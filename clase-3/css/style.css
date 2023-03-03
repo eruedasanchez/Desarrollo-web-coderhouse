@@ -1,0 +1,98 @@
+/* estilo en linea o el important es mas fuerte que id; son malas practicas
+id es mas fuerte que class
+class es mas fierte que una etiqueta 
+
+font-family: 'Roboto', sans-serif;
+font-family: 'Open Sans', sans-serif;
+
+*/
+
+/*
+h1{
+    color: red;
+}
+*/
+
+main p{
+    color: blue;
+}
+
+#copyright{
+    color: orange;
+}
+
+.estilos-parrafo{
+    color: gold;
+}
+
+.estilos-parrafo-secundario{
+    color: pink;
+}
+
+footer{
+    color: green;
+}
+
+/* Inicio segunda parte de la clase. Contactos */
+
+.contacto-h1{
+    color: green;
+    text-align: center;          /* Posicion del texto (center,left,right). Solo aplica para textos */
+    text-decoration: underline;  /* Subrayado al texto (underline,overline,line-through). Solo aplica para textos */
+    text-transform: uppercase;   /* Solo la primera letra en mayuscula (capitalize), todo el texto en mayuscula (uppercase). Solo aplica para textos */
+    word-spacing: 20px;          /* Separa palabras entre si */
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.section-contactos{
+    width: 100%;
+    height: 600px;
+    background-color: beige;                                      /* Fondo de color al contenedor */
+    background-image: url("../assets/img/gatito-pesado.jpg");
+    background-position: center left;                               /* Coloca la imagen en el medio (center) */
+    /* background-size: contain; */                                 /* Contiene a la imagen pero repetida */
+    background-size: cover;                                         /* Una vez redimensionado con iloveimg cubre toda la pantalla (cover) */
+    background-repeat: no-repeat;                                   /* Contiene a la imagen pero sin repetir */
+    /*opacity: 50%;*/                                               /* Crea una transparencia a la imagen. No es recomendable */
+    filter: contrast(1);                                            /* Filter crea filtros */
+    background-attachment: fixed;                                   /* Se logra que el texto se mueva pero la imagen queda fija */
+}
+
+.section-contactos p{
+    text-indent: 20px;    /* Genera una sangria */
+    letter-spacing: 5px;  /* Para separacion de letras */
+    line-height: 16px;    /* Espaciado entre renglon. Por defecto, son 16px */
+    
+    /* Fuentes. Se utliza Google fonts */
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;                        /* Agranda o achica las letras */
+    font-style: normal;                     /* Cambia formato de las letras */
+    /*font-variant: small-caps; */          /* Letras chicas por mas tengan muchos pxs */
+    font-weight: bolder;                    /* Cambia el grosor de la letra */
+}
+
+.section-contactos p span{
+    vertical-align: 1opx;  /* Genera jerarquia para el contenido dentro de span. Ideal para logos. Le puedo pasar pixeles */
+
+}
+
+.navbar{
+    list-style: none;
+}
+
+.navbar li a{
+    text-decoration: none; /* Elimino el subrayado de inicio */
+    color: blue;
+    font-size: 20px;
+}
+
+/* Propiedades importantes para darle tamaño a las imagenes y contenedores 
+
+width: referencia al ancho de pantalla
+height: referencia al largo de pantalla
+*/
+
+/* */
+
+
