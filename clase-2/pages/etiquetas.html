@@ -7,11 +7,11 @@
     <title>etiquetas</title>
 </head>
     <body>
+        <a href="#pie">Ir hacia abajo de mi documento</a> <!--Enlace interno para moverme dentro del documento-->
         <!--Listas. Sirven para agrupar informacion. Existen tres tipos de listas-->
         <ol> <!--Etiqueta padre o contenedora-->
-            <!--Listas que requieren un orden o que sirven para representar pasos Order List-->
-                <!--Siempre dentro de una order list. li = list item. Etiqueta hija-->
-            <li>prender fuego</li>
+            <!--ol: order list. Listas que requieren un orden o que sirven para representar pasos Order List-->
+            <li>prender fuego</li>                       <!--Siempre dentro de una order list. li = list item. Etiqueta hija-->
             <li>salar la carne</li>
             <li>esperar a que caliente la parrilla</li>
             <li>poner la carne</li>
@@ -37,15 +37,14 @@
                 <!--Data definition. Etiqueta de definition-->
                 Una empresa e-learning donde podes aprender programacion
             </dd>
-
         </dl>
 
         <!--A continuacion, vamos a ver etiquetas de parrafo-->
         <p>Lorem ipsum <em>dolor sit amet</em> consectetur <strong>adipisicing</strong> elit. <b>doloremque dolorum facere,</b> dignissimos debitis quasi nihil porro asperiores, vero voluptates exercitationem quam vitae sapiente maiores beatae, doloribus alias accusantium. <br> Consequatur?</p>
-        <!--La etiqueta strong es para darle enfasis, es una palabra clave para SEO-->
-        <!--La etiqueta b es simplemente una negrita para resaltar un parrafo pero que no es clave para SEO-->
-        <!--La etiqueta em tambien da enfasis en una palabra y tambien lo reconoce SEO-->
-        <!--La etiqueta br se utiliza para hacer punto y aparte. Solo dentro de p-->
+        <!--La etiqueta strong es para darle enfasis, es una PALABRA clave para SEO-->
+        <!--La etiqueta b es simplemente una negrita para resaltar un PARRAFO pero que no es clave para SEO-->
+        <!--La etiqueta em tambien da enfasis en una PALABRA y tambien lo reconoce SEO. La convierte en cursiva-->
+        <!--La etiqueta br se utiliza para hacer punto y aparte. Solo se utiliza dentro de p-->
 
         <!--Titulos. Heading tags, h-->
         <h1>TITULO PRINCIPAL
@@ -67,11 +66,21 @@
                             <!--Refiere a subtitulos y se pueden usar los que deseen-->
                             </h6>
         
-        <!--Enlaces. Super importante-->
-        <!--anchor, ancla o simplemente etiqueta a. Etiqueta que genera hipervinculos/conexion entre distintos html, otros sitios webs
+        <!--Enlaces. SUPER IMPORTANTE-->
+        <!--anchor, ancla o simplemente etiqueta a. Etiqueta que genera hipervinculos/conexion entre diferentes html, otros sitios webs
             y el mismo documento-->
-            <!--href: Referencia al hipervinculo. Marca la ruta hacia donde queremos ir-->
-        <a href="">INICIO</a>
+        <!--href: Referencia al hipervinculo. Marca la ruta hacia donde queremos ir-->
+        <a href="../index.html">INICIO</a> <!--Enlace relativo. Me traslado de etiquetas.html a index.html-->
+        <a href="https://es.wikipedia.org/wiki/HTML" target="_blank">wikipedia html</a> <!--Enlace absoluto. Redirecciona al sitio pasado en href-->
+        
+        <p id="pie">Esto es el pie</p>
+
+        <!--Ahora, vamos a ver Multimedia-->
+        <!--Imagenes-->
+        <!--Etiqueta img. Vacia o nula porque no va a contener informacion. Solo va a llamar-->
+        <!--alt sirve tanto para SEO como para accesibilidad. Cuando la imagen se rompe o cae (por ejemplo, al llamar imagenes de otros sitios webs, figura el alt. Sirve tambien para personas con capacidades especiales, a traves del alt se puede detectar la descripcion de la imagen-->
+        <img src="../assets/img/primera-imagen-documento.jpg" alt="luna llena con fondo negro">
+        <img src="https://images.unsplash.com/photo-1621939703744-9b75e3f7ff0e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2680&q=80" alt="iphone 12 purple"> <!--Tambien puedo colocar links de imagenes. La unica diferencia con la forma anterior es que si sacan la imagen, a mi se me va a romper-->
 
     </body>
 </html>
