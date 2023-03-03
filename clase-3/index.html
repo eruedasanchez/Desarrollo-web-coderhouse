@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASE-3</title>
+    <link rel="stylesheet" href="./css/style.css"> <!--Etiqueta para llamar archivos. En nuestro caso, a archivos css--> <!--enlaza automaticamente el archivo style.css con index.html-->
+</head>
+
+<!--Etiqueta para CSS2-->
+<!--<style>
+    h2{
+        color: blue;
+    }
+</style> -->
+
+<body>
+    <!--Modo CSS mas antiguo (CSS1)-->
+    <!--<h1 style="color: red;"> MI PROYECTO CON CSS</h1> --> <!--Se cambia el color de las letras del titulo a rojo-->
+
+    <!--Modo CSS2-->
+    <!--<h2> Mi proyecto con css2</h2> --> <!--Se cambia el color de las letras del titulo a azul-->
+    <h1>ESTA ES LA MANERA CORRECTA DE USAR CSS</h1>
+
+    <header>
+        <div>
+            <h1>logo</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href=""></a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Cualquier etiqueta puede tener class-->
+        <p>PARRAFO DE PRUEBA</p>
+        <p class="estilos-parrafo" id="copyright">PARRAFO DE PRUEBA</p> <!--las clases se pueden reutilizar las veces que sea necesario en cualquier lugar-->
+        <p>PARRAFO DE PRUEBA</p>
+        <p class="estilos-parrafo-secundario">PARRAFO DE PRUEBA</p>
+        <p>PARRAFO DE PRUEBA</p>
+    </main>
+
+    <footer>
+        <!--Los id's son unicos e irrepetibles. No se pueden volver a reutilizar ni en otro html ni en otro lugar. Solamente va a vivir en este hmtl (index.html)-->
+        <p id="copyright">copyright</p>
+        <div>
+            <p id="copyright">soy el parrafo de footer</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+<!--Diferentes maneras de escribir classes
+        1) camelCase o joroba de camello. Por ejemplo, colorParrafo
+        2) kebab: pone guiones medios entre las palabras. Por ejemplo, color-parrafo
+        3) snake_case: poniendo guiones bajos. Por ejemplo, color_parrafo
+-->
