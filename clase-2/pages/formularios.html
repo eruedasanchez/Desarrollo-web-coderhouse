@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Etiqueta para generar formularios-->
+    <!--El atributo action se utiliza para indicar a donde queremos redigiir la info del form-->
+    <!--El atributo method indica como va a viajar la informacion-->
+    <form action="" method="get"> <!--get muestra en la barra de navegacion la info del form, post la oculta-->
+        <fieldset>
+            <!--Etiqueta que sirve para agrupar informacion-->
+            <legend>DATOS PERSONALES</legend>
+            <label for="nombre">                            <!--Recibe la info que luego le va a pasar a action para que lo envie a una base-->
+            <span>Nombre</span>
+            <input type="text" id="nombre" placeholder="Ingrese aqui su nombre" required>  <!--Tipo de informacion que se va a guardar--> <!-- el nombre de id siempre es el mismo que el de for en label --> <!-- required es para campo obligatorio-->
+            </label>
+
+            <label for="email">                            <!--Recibe la info que luego le va a pasar a action para que lo envie a una base-->
+                <span>Email</span>
+                <input type="email" id="email" placeholder="Ingrese aqui su email">  <!--Tipo de informacion que se va a guardar--> <!-- el nombre de id siempre es el mismo que el de for en label -->
+            </label>
+
+            <label for="pass">                            <!--Recibe la info que luego le va a pasar a action para que lo envie a una base-->
+                <span>Contraseña</span>
+                <input type="password" id="pass" placeholder="Ingrese aqui su contraseña">  <!--Tipo de informacion que se va a guardar--> <!-- el nombre de id siempre es el mismo que el de for en label -->
+            </label>
+
+            <label for="date">                            <!--Recibe la info que luego le va a pasar a action para que lo envie a una base-->
+                <span>Fecha</span>
+                <input type="date" id="date">  <!--Tipo de informacion que se va a guardar--> <!-- el nombre de id siempre es el mismo que el de for en label -->
+            </label>
+
+            <label for="horario">                            <!--Recibe la info que luego le va a pasar a action para que lo envie a una base-->
+                <span>Hora</span>
+                <input type="time" id="horario">  <!--Tipo de informacion que se va a guardar--> <!-- el nombre de id siempre es el mismo que el de for en label -->
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>Otros datos</legend>
+            <label for="chico">chico</label>
+            <input type="radio" id="chico" name="edad" value="chico">
+            <label for="adulto">adulto</label>
+            <input type="radio" id="adulto" name="edad" value="adulto">
+            <label for="anciano">anciano</label>
+            <input type="radio" id="anciano" name="edad" value="viejo">
+
+            <label for="acepta">Acepto terminos y condiciones</label>
+            <input type="checkbox" id="acepta" name="acepta" value="acepta">
+        </fieldset>
+         <input type="submit">
+    </form>
+</body>
+</html>
