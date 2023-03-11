@@ -1,0 +1,35 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******************* header *******************/
+
+header{
+    background-color: lightblue;
+}
+
+.container-header{
+    display: flex;                              /* "display" permite cambiar el estado natural de las etiquetas. "flex" permite colocar un elemento al lado del otro */
+    /* flex-direction: row; */                  /* flex direction le da la direccion. Por defecto, siempre viene en row. Con column los elementos se convierten en bloque */
+    /* flex-wrap: wrap; */                      /* mantiene el elemento flexible y si se desborda, pasa el elemento de inline a block */
+    flex-flow: row wrap;                        /* flex flow contiene a flex-direction y flex-wrap */
+    /* movimientos en eje horizontal (row) */
+    justify-content: space-evenly;                /* center al centro, flex-start a la izquierda, flex-end a la derecha, space around genera un espacio de igual tamaño entre los distintos elementos y un margen que no es igual (es un poco menor)*/
+}
+
+.navbar{
+    display: flex;
+    list-style: none;
+    gap: 20px;                                   /* genero espacio entre los items de la barra de navegacion */
+    /* row gap solo afecta a las filas, column gap solo afecta a las filas, gap afecta a las dos */
+
+}
+
+.navbar li a{
+    text-decoration: none;
+    font-size: 25px;
+    color: black;
+}
