@@ -1,0 +1,179 @@
+/* Lo primero que se realiza cada vez que se inicia un archivo es el "reset"  
+    Lo debemos hacer porque cada navegador tiene estilos propios y podria generarnos conflictos en la vision de la pagina 
+    De este modo, logramos que nuestro sitio web se vea bien en cualquier navegador 
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+#header-second-color{
+    background-color: bisque;
+}
+
+.header-background{
+    background-color: violet;
+    font-size: 3rem;
+}
+
+header{
+    background-color: lightblue;
+    letter-spacing: 5px;
+    /* text-align: center; */
+    font-size: 2rem;                /* 2rem = 20px */
+    /* position: fixed; */  /* genera una capa mas */
+    /* top: 0; */
+    position: sticky; /* el elemento se mantiene en su lugar y me acompaña en el scroll */
+    top: 20px;
+    z-index: 2; /* propiedad para trabajar como si fueran capas (PROPIEDAD SUPER IMPORTANTE). Se trabajan solo con multiplos de 2, i.e, 2-4-6-8-....*/
+
+}
+
+/* Aca vemos el ejemplo de em */
+main{
+    font-size: 30px;
+    width: 10rem;
+    height: 10rem;
+    background-color: aqua;
+    overflow: auto; /* contiene los elementos. Evita el desborde. overflow:hidden evita el desborde pero no puedo leer lo que se desbordo. Lo arreglo con scroll */
+}
+/* 2.0rem = 1em */
+
+p{
+    font-size: 0.5em; /* Toma como punto de partida al contenedor. En este caso, al main */
+}
+
+/******** MEDIDAS ABSOLUTAS ********/
+
+/*
+Absoluta quiere decir que no importa el tamaño de pantalla, va a respetar esa medida en desktop, phone o tablet.
+Esto dificulta el responsive porque es una medida fija.
+
+px = la vamos a usar por defecto. Por ejemplo, imagenes jpg, png, etc */
+
+/******** MEDIDAS RELATIVAS ********/
+
+/* Son medidas friendly para el responsive porque depende del tamaño que le dictemos, si lo quiero pasar a dispositivos
+mobiles o tablets se va a adaptar al tipo de pantalla 
+
+1) % = 0 a 100. Cuando decimos 100% nos referimos al 100% del ancho de pantalla
+
+2) rem. Por defecto, todos los navegadores tienen 16px de fuente. Tienen de base el tamaño de letra (font size)
+
+CONVERSIONES
+
+1rem = 16px (font-size standard de los navegadores)
+
+Veamos el siguiente ejemplo
+
+16px ------ 1rem
+20px ------ x = 20 * 1 / 16 = 1.25rem
+
+Veamos otro ejemplo
+
+16px ------ 1rem
+10px ------ x = 10 * 1 / 16 = 0.625rem
+
+Entonces:
+
+1rem     ------ 100%
+0.625rem ------ x = 0.625 * 100 / 1 = 62,5%
+
+Por lo tanto, si quiero trabajar con medidas rem en todo el proyecto coloco
+
+html{
+    font-size: 62.5%;
+}
+
+y todo lo que coloco en unidad rem va a estar medido en decimales
+
+Finalmente, concluimos que 62.5% = 1rem = 10px y puedo trabajar todo en medida decimal
+
+3) em. Tienen de base el tamaño de letra (font size). Esta determinado por el contenedor 
+
+*/
+
+/********* Comienzo de la segunda parte de la clase *********/
+
+footer{
+    width: 100%;
+    height: 10rem;
+    margin: 20px 30px 10px 50px;
+    background-color: beige;
+}
+
+a{
+    font-size: 5.0rem;
+    /* padding: 4.0rem; */             /* genera un terreno para la etiqueta ancla. Afecta a todos los lados */
+    /* padding-top: 30px; */           /* genera solo terreno hacia la derecha */
+    /* padding-right: 50px; */         /* genera solo terreno abajo */
+    /* padding-bottom: 20px;   */      /* genera solo terreno arriba */
+    /* padding-left: 30px;  */         /* genera solo terreno hacia la izquierda */
+    /* padding: 3.0rem 5.0rem; */      /* en este caso, el primer valor (3.0rem) corresponde al sentido vertical (arriba y abajo) y el segundo valor (5.0rem) corresponde al sentido horizontal (izquierda y derecha) */
+    padding: 20px 30px 10px 50px;      /* Como se declara en sentido agujas del reloj, 20px equivale a top, 30px equivale a right, 10px equivale a bottom y 50px equivale a left */ 
+    
+    /* margin: calles que dividen con el vecino. Funciona igual que padding */
+    margin: 20px 30px 10px 50px;
+    background-color: aqua;
+}
+
+.container-cuadrado{
+    width: 300px;
+    height: 300px;
+    position: relative;  /* En este caso, position absolute toma al relative como padre y no se va a desbordar */
+    background-color: red;
+
+}
+
+.cuadrado{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    /* border: 2px solid black; */ /* delimito bordes al cuadrado. Primer atributo (2px) corresponde al grosor, segundo atributo como va a ser ese borde y el tercer atributo corresponde al color */
+    border-width: 4px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: -20px -10px 5px grey; /* primer atributo (20px) izquierda o derecha, segundo atributo (10px) arriba o abajo, tercer atributo esfumado alrededor de toda la figura y cuarto atributo color */
+    /* position: relative; */
+    /* top right bottom left */
+    position: absolute; /* la diferencia con relative es que absolute toma como tope a su etiqueta contenedora. En el caso de no tener etiqueta contenedora, toma a body */ 
+    top: 50%;
+    left: 30%; 
+}
+
+.cuadrado p{
+    font-size: 20px;
+    background-color: brown;
+    text-align: center;
+}
+
+h1{
+    text-shadow: -20px -10px 5px grey;
+    display: inline;
+}
+
+span{
+     /* propiedad con la cual cambiamos el estado natural de cualquier etiqueta */
+     display: block;    /* por defecto los span son inline */
+
+}
+
+.container-span{
+    margin-top: 3.0rem;
+    margin-left: 2.0rem;
+    margin-bottom: 3.0rem;
+    display: none;          /* oculta */
+
+}
+
+
+
+
