@@ -1,0 +1,52 @@
+/* reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container-grid{
+    background-color: azure;
+    width: 100%; /* todo el ancho de pantalla */
+    height: 100vh;
+    display: grid; /* invoco a grids */
+    /* Luego de invocar a grids, declaro cantidad de filas y columnas */
+    /*grid-template-columns: 200px repeat(4, 1fr); */            /* declaro 10 columnas de 200px. El % es de acuerdo al width que le declare. fr medida que solo se puede usar en grids */
+    /* grid-template-rows: repeat(2, 200px); */                  /* para declarar filas */
+    grid-template: repeat(4, 100px) / repeat(4, 200px);              /* row / columns */                                             /* combina grid-template-columns y grid-template-rows */
+    /* Ahora, posicionamos los items */
+    grid-template-areas:                                         /* ubico elementos como en una matriz */
+    "item1 item1 item1 item1"
+    "item2 item3 item3 item3"
+    "item2 item4 item5 item5"           /* con . suprimo una celda */
+    "item2 item4 item5 item5";
+    /* Grids solo admite armar matrices formando cuadrados o rectangulos */
+    /* gap: 20px; */                         /* separa a los elementos dentro del grid */
+    row-gap: 10px;
+    column-gap: 5px;
+}
+
+.item1{
+    grid-area: item1;                                           /* ordeno a cada item la posicion que ocupa en la matriz */
+    background-color: lightblue;
+}
+
+.item2{
+    grid-area: item2;
+    background-color: yellow;
+}
+
+.item3{
+    grid-area: item3;
+    background-color: lightgreen;
+}
+
+.item4{
+    grid-area: item4;
+    background-color: purple;
+}
+
+.item5{
+    grid-area: item5;
+    background-color: lightcoral;
+}
