@@ -17,7 +17,7 @@ header{
     /* flex-wrap: wrap; */                      /* mantiene el elemento flexible y si se desborda, pasa el elemento de inline a block */
     flex-flow: row wrap;                        /* flex flow contiene a flex-direction y flex-wrap */
     /* movimientos en eje horizontal (row) */
-    justify-content: space-evenly;                /* center al centro, flex-start a la izquierda, flex-end a la derecha, space around genera un espacio de igual tamaño entre los distintos elementos y un margen que no es igual (es un poco menor)*/
+    justify-content: space-between;                /* center al centro, flex-start a la izquierda, flex-end a la derecha, space around genera un espacio de igual tamaño entre los distintos elementos y un margen que no es igual (es un poco menor)*/
 }
 
 .navbar{
@@ -25,6 +25,7 @@ header{
     list-style: none;
     gap: 20px;                                   /* genero espacio entre los items de la barra de navegacion */
     /* row gap solo afecta a las filas, column gap solo afecta a las filas, gap afecta a las dos */
+    justify-content: center;
 
 }
 
@@ -33,3 +34,78 @@ header{
     font-size: 25px;
     color: black;
 }
+
+/******* Segunda parte de la clase *******/
+
+/******* main *******/
+
+h1, h2{
+    text-align: center;
+}
+
+.container-cards{
+    display: flex;
+    flex-direction: row;                        /* movimiento en sentido vertical */
+    flex-wrap: wrap;
+    height: 900px;                              /* propiedad largo o alto del contenedor */
+    background-color: beige;
+    justify-content: space-around;
+    align-items: center;                       /* alinear elementos */
+    row-gap: 20px;
+    /* align-content: flex-end; */              /* solo funciona cuando tengo multilinea */ 
+
+}
+
+.item1{
+    background-color: lightblue;
+    order: 1;
+    align-self: flex-start; /* permite mover los elementos de forma independiente */
+
+}
+
+.item2{
+    background-color: lightcoral;
+    order: 2;
+}
+
+.item3{
+    background-color: lightyellow;
+    order: 3;
+    align-self: flex-end;
+}
+
+.item4{
+    background-color: lightpink;
+    order: 4;
+}
+
+.item5{
+    background-color: lightgrey;
+    order: 5;
+}
+
+.change{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    /* como estamos en flex-direction column, align item se mueve de izq a der */
+    align-items: center;
+    justify-content: center;         /* se mueve de arriba hacia abajo */
+}
+
+.change img{
+    width: 200px;
+}
+
+.card div{
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    gap: 20px;                      /* permite la separacion de elementos */
+}
+
+
+
+
+
