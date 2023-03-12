@@ -18,17 +18,26 @@
     grid-template-areas:                                         /* ubico elementos como en una matriz */
     "item1 item1 item1 item1"
     "item2 item3 item3 item3"
-    "item2 item4 item5 item5"           /* con . suprimo una celda */
+    "item2 item4 item5 item5"                /* con . suprimo una celda */
     "item2 item4 item5 item5";
     /* Grids solo admite armar matrices formando cuadrados o rectangulos */
     /* gap: 20px; */                         /* separa a los elementos dentro del grid */
     row-gap: 10px;
     column-gap: 5px;
-}
+
+    /* Movimientos en grids. Segunda parte */
+    justify-content: center;                /* Como grids es bidireccional, afecta a ambas direcciones en el contenedor */
+    align-content: center;
+    /* align-items: center; */                    /* Mueve los elementos adaptandose al contenido en sentido vertical en la posicion indicada */
+    /* justify-items: center; */                  /* Mueve los elementos adaptandose al contenido en sentido horizontal en la posicion indicada */
+}  
 
 .item1{
     grid-area: item1;                                           /* ordeno a cada item la posicion que ocupa en la matriz */
     background-color: lightblue;
+    /* Movimientos self solo para los hijos */
+    justify-self: center;
+    align-self: center;
 }
 
 .item2{
@@ -50,3 +59,4 @@
     grid-area: item5;
     background-color: lightcoral;
 }
+
