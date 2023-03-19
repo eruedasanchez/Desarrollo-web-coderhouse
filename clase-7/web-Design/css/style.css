@@ -1,0 +1,112 @@
+/* reset */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.img-respo{
+    width: 100%;
+}
+
+.main-index{
+    display: grid;
+    width: 100%;
+    height: 100vh;                          /* vista a lo largo de la pantalla */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    "item-1 item-1 item-1"
+    "item-2 item-2 item-3"
+    "item-4 item-4 item-5"
+    ;
+}
+
+.item-1{
+    grid-area: item-1;
+   background-color: lightblue; 
+}
+
+.item-2{
+    background-color: lightcoral; 
+    grid-area: item-2;
+ }
+
+ .item-3{
+    background-color: lightcyan; 
+    grid-area: item-3;
+ }
+
+ .item-4{
+    background-color: lightgreen; 
+    grid-area: item-4;
+ }
+
+ .item-5{
+    background-color: lightskyblue; 
+    grid-area: item-5;
+ }
+
+ /* Inicializacion de un mediaquery 
+ 
+@media(aca vamos a poner el breakpoint){
+    va a ir el codigo que vamos a modificar
+
+    dentro de los parentesis si lo quiero llevar de desktop a mobile
+    uso max-width
+}
+*/
+
+@media(max-width:1024px){
+    .item-1{
+        background-color: gold;
+        font-size: 40px;
+        text-align: center;
+    }
+}
+
+@media(max-width:768px){
+    .main-index{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "item-1 item-1"
+        "item-2 item-3"
+        "item-4 item-5";
+    }
+    .item-2{
+        background-color: beige;
+        text-align: end;
+        font-size: 20px;
+    }
+}
+
+@media(max-width:425px){
+    .main-index{
+        grid-template-rows: 100px 100px repeat(2, 1fr);
+        grid-template-areas: 
+        "item-1 item-1"
+        "item-2 item-2"
+        "item-3 item-3"
+        "item-4 item-5";
+    }
+}
+
+@media(max-width:375px){
+    .item-2{
+        background-color: black;
+    }
+}
+
+@media(max-width:320px){
+    .main-index{
+        grid-template-columns: 1fr;                         /* si no lo modifico, queda el anterior */
+        grid-template-rows: 100px 100px repeat(3, 1fr);
+        grid-template-areas:
+        "item-1"
+        "item-2"
+        "item-3"
+        "item-4"
+        "item-5" 
+        ;
+    }
+}
